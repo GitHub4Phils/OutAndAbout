@@ -1,2 +1,2 @@
-# OutAndAbout
-group project 1
+# outAndAbout
+group project1
