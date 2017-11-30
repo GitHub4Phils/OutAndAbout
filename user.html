@@ -5,10 +5,10 @@
   <head>
 
     <meta charset="UTF-8">
-    <title>User Tracker</title>
+    <title>Out&About | Reservation </title>
 
     <!--CSS -->
-    <link rel="stylesheet" href="assets/css/search.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
 
     <!-- Bootstrap -->
@@ -31,15 +31,13 @@
     
     <!-- User Tracker -->
     <div class="container">
-    <h1 ><img src="assets/images/outaboutlogo.png" height="100"></h1>
+  
       <!-- Jumbotron -->
       <!-- <div class="jumbotron"; color: black">
         <h1 class="text-center">User Management</h1>
         <h3 class="text-center"></h3>
       </div>
-
       <div class="row">
-
         <div class="col-lg-12"> -->
 
         <!-- Current Users-->
@@ -52,7 +50,6 @@
                 <thead>
                   <tr>
                     <th>Name</th>
-
                     <th>Email Address</th>
                     <th>Phone Number</th>
                     <th>Event Name</th>
@@ -64,6 +61,7 @@
               </table>
             </div>
           </div> -->
+          <h1 ><img src="assets/images/outaboutlogo.png" height="100"></h1>
 
           <!-- Add User  -->
           <div class="panel panel-secondary">
@@ -90,13 +88,18 @@
                   
               </div>
               <div class="form-group" data-placement="left" data-align="top" data-autoclose="true">
+                  <label for="starttime">Event ID</label>
+                  <input type="text" class="form-control" value="Event Name" id="eventid-input">
+                  
+              </div>
+              <div class="form-group" data-placement="left" data-align="top" data-autoclose="true">
                   <label for="starttime">Event</label>
-                  <input type="text" class="form-control" value="Event Name" id="event-input">
+                  <input type="text" class="form-control" value="Event Name" id="eventname-input">
                   
               </div>
               <div class="form-group" data-placement="left" data-align="top" data-autoclose="true">
                   <label for="starttime">Event Date</label>
-                  <input type="text" class="form-control" value="Event Date" id="date-input">
+                  <input type="text" class="form-control" value="Event Date" id="eventdate-input">
                   
               </div>
                 
