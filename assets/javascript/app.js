@@ -121,6 +121,11 @@ $(document).ready(function(){
 		    		var venueAddress= $("<p>").text(result.venue_address);
 		    		var cityName = $("<p>").text(result.city_name);
 		    		var event_img = $("<img>");
+		    	// add id to the div so we can show it later
+		    		var event_id = result.id;	
+		    		//var cons = eventDiv.attr("id", event_id);
+
+		    		//console.log(cons);
 
 		    			if(result.image == null){
 		    				console.log('sorry no pic');
@@ -135,6 +140,8 @@ $(document).ready(function(){
 	    	 	$(".findParking").on("click",function(){
 					var city=result.city_name;
 					param_address = city;
+					$(".eventDiv").hide();
+
 
 //--------------- Geocode api call	
 
