@@ -1,27 +1,61 @@
- 
- h1 {
- 	text-align: center;
+h1 {
+    text-align: center;
  }
-@media only screen and (max-width: 300px) {
 
 body {
   background-size: cover;
   margin-top:110px;
-  padding-left:50px;
  }
-}
 
 .container {
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(251, 248, 248, 0.9);
   border-radius:25px;
   margin:auto;
-  align-content: center
-  padding:30px;
+  align-content: top
+  padding-top:10px;
   padding-bottom: 30px;
   margin-top: 120px;
-  margin-bottom: 10px;
-  max-width: 800px;
+  max-width: 1000px
   }
+
+.panel {
+  opacity: 0.9;
+}
+
+
+.btn {
+  background-color: hsl(48, 67%, 72%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdfbf6", endColorstr="#e7d487");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fdfbf6), to(#e7d487));
+  background-image: -moz-linear-gradient(top, #fdfbf6, #e7d487);
+  background-image: -ms-linear-gradient(top, #fdfbf6, #e7d487);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfbf6), color-stop(100%, #e7d487));
+  background-image: -webkit-linear-gradient(top, #fdfbf6, #e7d487);
+  background-image: -o-linear-gradient(top, #fdfbf6, #e7d487);
+  background-image: linear-gradient(#fdfbf6, #e7d487);
+  border-color: #e7d487 #e7d487 hsl(48, 67%, 65.5%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.42);
+  -webkit-font-smoothing: antialiased;
+  align-content: right;
+}
+
+
+.lib-panel {
+    margin-bottom: 20Px;
+}
+.lib-panel img {
+    width: 100%;
+    background-color: transparent;
+}
+
+
+
+.lib-panel .lib-row {
+    padding: 0 20px 0 20px;
+}
+
 
 
 /* For desktop: */

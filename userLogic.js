@@ -50,20 +50,28 @@ $("#add-user-btn").on("click", function(event) {
   //console.log(ValidateEmail("maroseray@yahoo.com"));
 
   // Grabs user input
-  var name   = $("#name-input").val().trim();
-  var email  = $("#email-input").val().trim();
-  var phone  = $("#phone-input").val().trim();
+  var name    = $("#name-input").val().trim();
+  var email   = $("#email-input").val().trim();
+  var phone   = $("#phone-input").val().trim();
+  var eventid = $("#eventid-input").val().trim();
+  var eventname  = $("#eventname-input").val().trim();
+  var eventdate  = $("#eventdate-input").val().trim();
 
   // //validate email
   if (ValidateEmail(email)===true){
 
-    if (validatePhone(phone)===true){
+
+    //if (validatePhone(phone)===true){
+    // if (validatePhone(phone)===true){
 
       // Creates local "temporary" object for holding user data
       var newUser = {
-        name:   name,
-        email: email,
-        phone:   phone
+        name:      name,
+        email:     email,
+        phone:     phone,
+        eventid:   eventid,
+        eventname: eventname,
+        eventdate: eventdate
         
       };
 
@@ -85,6 +93,10 @@ $("#add-user-btn").on("click", function(event) {
         $("#name-input").val("");
         $("#email-input").val("");
         $("#phone-input").val("");
+        $("#eventname-input").val("");
+        $("#eventid-input").val("");
+        $("#eventdate-input").val("");
+        $("#name-input").focus();
 
 
       } else{
@@ -94,16 +106,28 @@ $("#add-user-btn").on("click", function(event) {
         $("#email-input").val(email);
         $("#email-input").focus();
         $("#phone-input").val(phone);
+        $("#eventid-input").val(eventid);
+        $("#eventname-input").val(eventname);
+        $("#eventdate-input").val(eventdate);
+       } 
 
-      }
-    } else {
-      //shoot the data back in the form fields
-        $("#name-input").val(name);
-        $("#email-input").val(email);
-        $("#phone-input").focus();
-        $("#phone-input").val(phone);
-    }
-
+    // } else {
+    //   //shoot the data back in the form fields
+    //     $("#name-input").val(name);
+    //     $("#email-input").val(email);
+    //     $("#phone-input").focus();
+    //     $("#phone-input").val(phone);
+    //     $("#eventid-input").val(eventid);
+    //     $("#eventname-input").val(eventname);
+    //     $("#eventdate-input").val(eventdate);
+    // }
+    // } else {
+    //   //shoot the data back in the form fields
+    //     $("#name-input").val(name);
+    //     $("#email-input").val(email);
+    //     $("#phone-input").focus();
+    //     $("#phone-input").val(phone);
+    // }
   
 });
 
@@ -113,9 +137,12 @@ database.ref("users/").on("child_changed", function(childSnapshot, prevChildKey)
   //console.log(childSnapshot.val());
 
   // Store everything into a variable.
-  var UserName   = childSnapshot.val().name;
-  var email      = childSnapshot.val().email;
-  var phone      = childSnapshot.val().phone;
+  var UserName      = childSnapshot.val().name;
+  var email         = childSnapshot.val().email;
+  var phone         = childSnapshot.val().phone;
+  var eventid       = childSnapshot.val().eventid;
+  var eventname     = childSnapshot.val().eventname;
+  var eventdate     = childSnapshot.val().eventdate;
 
   // User Info
   // console.log(UserName);
