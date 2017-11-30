@@ -57,7 +57,7 @@ $("#add-user-btn").on("click", function(event) {
   // //validate email
   if (ValidateEmail(email)===true){
 
-    if (validatePhone(phone)===true){
+    // if (validatePhone(phone)===true){
 
       // Creates local "temporary" object for holding user data
       var newUser = {
@@ -85,6 +85,8 @@ $("#add-user-btn").on("click", function(event) {
         $("#name-input").val("");
         $("#email-input").val("");
         $("#phone-input").val("");
+        $("#name-input").focus();
+
 
 
       } else{
@@ -96,13 +98,13 @@ $("#add-user-btn").on("click", function(event) {
         $("#phone-input").val(phone);
 
       }
-    } else {
-      //shoot the data back in the form fields
-        $("#name-input").val(name);
-        $("#email-input").val(email);
-        $("#phone-input").focus();
-        $("#phone-input").val(phone);
-    }
+    // } else {
+    //   //shoot the data back in the form fields
+    //     $("#name-input").val(name);
+    //     $("#email-input").val(email);
+    //     $("#phone-input").focus();
+    //     $("#phone-input").val(phone);
+    // }
 
   
 });
