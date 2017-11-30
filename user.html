@@ -7,6 +7,10 @@
     <meta charset="UTF-8">
     <title>User Tracker</title>
 
+    <!--CSS -->
+    <link rel="stylesheet" href="assets/css/search.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--  additional css -->
@@ -23,23 +27,23 @@
 
   </head>
 
-  <body>
-
+  <<body iclass="jumbotron" background="assets/images/outaboutbackground.jpg">
+    
     <!-- User Tracker -->
     <div class="container">
-
+    <h1 ><img src="assets/images/outaboutlogo.png" height="100"></h1>
       <!-- Jumbotron -->
-      <div class="jumbotron" style="background-color: #ccffff; color: black">
+      <!-- <div class="jumbotron"; color: black">
         <h1 class="text-center">User Management</h1>
         <h3 class="text-center"></h3>
       </div>
 
       <div class="row">
 
-        <div class="col-lg-12">
+        <div class="col-lg-12"> -->
 
         <!-- Current Users-->
-          <div class="panel panel-primary">
+          <!-- <div class="panel panel-primary">
             <div class="panel-heading" style="background-color: #ccffff color='black'">
               <h3 class="panel-title"><strong style="color:black">User List</strong></h3>
             </div>
@@ -48,6 +52,7 @@
                 <thead>
                   <tr>
                     <th>Name</th>
+
                     <th>Email Address</th>
                     <th>Phone Number</th>
                     <th>Event Name</th>
@@ -58,12 +63,13 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          </div> -->
 
           <!-- Add User  -->
-          <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #ccffff color='black'">
-              <h3 class="panel-title"><strong>Add a user</strong></h3>
+          <div class="panel panel-secondary">
+            <div class="panel-heading">
+              
+              <h3 class="panel-title"><strong>Make a Reservation</strong></h3>
             </div>
             <div class="panel-body">
 
@@ -83,7 +89,16 @@
                   <input type="text" class="form-control" value="(512)-1234564" id="phone-input">
                   
               </div>
-              
+              <div class="form-group" data-placement="left" data-align="top" data-autoclose="true">
+                  <label for="starttime">Event</label>
+                  <input type="text" class="form-control" value="Event Name" id="event-input">
+                  
+              </div>
+              <div class="form-group" data-placement="left" data-align="top" data-autoclose="true">
+                  <label for="starttime">Event Date</label>
+                  <input type="text" class="form-control" value="Event Date" id="date-input">
+                  
+              </div>
                 
                 <button class="btn btn-primary" id="add-user-btn" type="submit">Submit</button>
               </form>
