@@ -58,7 +58,17 @@ $(document).ready(function(){
 						}).done(function(response){
 							console.log(response);
 							for(var i=0; i<response.length; i++){
-								console.log(response[i]._embedded["pw:location"].name);
+								// console.log(response[i]._embedded["pw:location"].name);
+								var parkingDiv = $("<div>").addClass("parkingDiv");
+					    		var result = response[i]._embedded["pw:location"];
+					    		var parkingName = $("<p>").text(result.name); 
+					    		var parkingAddress = $("<p>").text(result.address1);
+					    		var parkingCityName = $("<p>").text(result.city);
+					    		var parking_img = $("<img>");
+					    		var source = result.photos[0].sizes.hub_frontpage.URL;
+		    					parking_img.attr("src", source);
+					    		parkingDiv.append(parkingName, parkingAddress,parkingCityName, parking_img, "<button  class=\"reserveParking\">Reserve this parking</button>");
+					    		$("#event_title").append(parkingDiv);
 							}
 						});
 			    	}); 
