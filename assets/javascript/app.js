@@ -21,6 +21,7 @@ $(document).ready(function(){
 		    		var venueName = $("<p>").text(result.venue_name);
 		    		var venueAddress= $("<p>").text(result.venue_address);
 		    		var cityName = $("<p>").text(result.city_name);
+		    		var eventID = $("<p>").text(result.id);
 		    		var event_img = $("<img>");
 		    		var event_id = result.id;	
 		    			if(result.image == null){
@@ -29,11 +30,14 @@ $(document).ready(function(){
 		    				var source = "https:" + result.image.medium.url;
 		    				event_img.attr("src", source);
 		    			}
-		    		eventDiv.append(event_img, title, date, venueName, venueAddress, cityName, "<button class=\"findParking\">Find Parking</button>");
+		    		eventDiv.append(event_img, title, date, venueName, venueAddress, cityName, eventID, "<button class=\"findParking\" id=\"eventID\" >Find Parking</button>");
+
 	    	 		$("#event_title").append(eventDiv);
 	    	 	};// end of for loop
 
 	    	 	$(".findParking").on("click",function(){
+	    	 		var test= $("#id").val();
+	    	 		console.log(test);
 					var city=result.city_name;
 					param_address = city;
 					$(".eventDiv").hide();
