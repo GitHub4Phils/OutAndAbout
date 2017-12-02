@@ -11,8 +11,6 @@ $(document).ready(function(){
 		    method: "GET",
 		    dataType: "jsonp"
 			}).done(function(response){
-		    	console.log(response);
-		    	for(var i=0; i<response.events.event.length; i++)
 		    	{
 			    	var eventDiv = $("<div>").addClass("eventDiv");
 		    		var result= response.events.event[i];
@@ -33,17 +31,15 @@ $(document).ready(function(){
 		    		eventDiv.append(event_img, title, date, venueName, venueAddress, cityName, eventID, "<button class=\"findParking\" id=\"eventID\" >Find Parking</button>");
 
 	    	 		$("#event_title").append(eventDiv);
-	    	 	};// end of for loop
+	    	 	};
 
 	    	 	$(".findParking").on("click",function(){
 	    	 		var test= $("#id").val();
-	    	 		console.log(test);
 					var city=result.city_name;
 					param_address = city;
 					$(".eventDiv").hide();
 
 			    	var qURL="https://maps.googleapis.com/maps/api/geocode/json?address="+param_address+"&key=AIzaSyACTToJ83QeuxyB1XttdgZ1MaVTMZSEoWg"
-					alert("Parking");
 					$.ajax({
 			    		url:qURL,
 			    		method:"GET"
@@ -52,17 +48,13 @@ $(document).ready(function(){
 			    		long = response.results[0].geometry.location.lng;
 			    		latitude = lat.toString();
 			    		longitude = long.toString().slice(0,-1);
-			    		console.log(latitude);
-			    		console.log(longitude);	
 
 			    		var url ="http://api.parkwhiz.com/v4/quotes/?q=coordinates:"+lat+","+long+"&start_time=2017-12-01T12:00&end_time=2017-12-01T20:00&api_key=f7b2b035fff3071079e73edd3d9e42924c0c0eeb"
 						$.ajax({
 							url: url,
 							method:"GET",
 						}).done(function(response){
-							console.log(response);
 							for(var i=0; i<response.length; i++){
-								// console.log(response[i]._embedded["pw:location"].name);
 								var parkingDiv = $("<div>").addClass("parkingDiv");
 					    		var result = response[i]._embedded["pw:location"];
 					    		var parkingName = $("<p>").text(result.name); 
