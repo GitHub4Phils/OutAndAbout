@@ -7,6 +7,11 @@
   background-color:white;
   padding:10px;
   border:1px solid black;
+  border-radius: 25px;
+  min-width: 200px;
+  min-height:250px;
+  display:inline-block;
+  overflow: auto;
 }
 .eventDiv{
   margin-bottom:10px;
@@ -14,7 +19,47 @@
   background-color:white;
   padding:10px;
   border:1px solid black;
+  border-radius: 25px;
+  width: 300px;
+  height: 350px;
+  overflow: auto;
+  min-width: 200px;
+  min-height:250px;
+  display:inline-block;
 } 
+
+/*.event_img {
+  width:200px;
+}*/
+
+button {
+  background-color: hsl(48, 67%, 72%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdfbf6", endColorstr="#e7d487");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fdfbf6), to(#e7d487));
+  background-image: -moz-linear-gradient(top, #fdfbf6, #e7d487);
+  background-image: -ms-linear-gradient(top, #fdfbf6, #e7d487);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfbf6), color-stop(100%, #e7d487));
+  background-image: -webkit-linear-gradient(top, #fdfbf6, #e7d487);
+  background-image: -o-linear-gradient(top, #fdfbf6, #e7d487);
+  background-image: linear-gradient(#fdfbf6, #e7d487);
+  border-color: #e7d487 #e7d487 hsl(48, 67%, 65.5%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.42);
+  -webkit-font-smoothing: antialiased;
+  align-content: right;
+
+}
+
+p {
+  text-align: left;
+  clear: both;
+}
+
+img {
+  border-radius: 25px;
+}
+
  h1 {
  	text-align: center;
 }
@@ -40,8 +85,7 @@ body {
   opacity: 0.9;
 }
 
-
-.btn {
+.button  {
   background-color: hsl(48, 67%, 72%) !important;
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdfbf6", endColorstr="#e7d487");
