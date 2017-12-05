@@ -1,3 +1,42 @@
+#userForms{
+  padding:10px;
+}
+#event_title{
+  padding:10px;
+}
+.parkingCartDiv{
+  border:1px solid black;
+  width:200px;
+  margin:5px;
+  padding:5px;
+  background-color:white;
+
+}
+.eventCartdiv{
+  border:1px solid black;
+  width:200px;
+  margin:5px;
+  padding:5px;
+  background-color:white;
+}
+.findParking{
+  float:right;
+}
+.cartTitle{
+  text-align:center;
+  color:grey;
+  font-size: 25px;
+}
+.data{
+  margin-top:20px;
+}
+#lclimg{
+  text-align:center;
+}
+.add-user-btn{
+ text-align:center;
+}
+
 .reserveParking{
   float:right;
 }
@@ -7,6 +46,8 @@
   background-color:white;
   padding:10px;
   border:1px solid black;
+  border-radius: 25px;
+  font-size: 15px;
 }
 .eventDiv{
   margin-bottom:10px;
@@ -14,8 +55,35 @@
   background-color:white;
   padding:10px;
   border:1px solid black;
+  border-radius:25px;
 } 
- h1 {
+button {
+  background-color: hsl(48, 67%, 72%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdfbf6 ", endColorstr="#e7dd ");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fdfbf6 ), to(#e7d487 ));
+  background-image: -moz-linear-gradient(top, #fdfbf6 , #e7d487 );
+  background-image: -ms-linear-gradient(top, #fdfbf6 , #e7d487 );
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfbf6 ), color-stop(100%, #e7d487 ));
+  background-image: -webkit-linear-gradient(top, #fdfbf6 , #e7d487 );
+  background-image: -o-linear-gradient(top, #fdfbf6 , #e7d487 );
+  background-image: linear-gradient(#fdfbf6 , #e7d487 );
+  border-color: #e7d487 #e7d487 hsl(48, 67%, 65.5%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.42);
+  -webkit-font-smoothing: antialiased;
+  align-content: right;
+
+}
+
+p{
+  text-align:left;
+  clear:both;
+}
+img{
+  border-radius:25px;
+}
+h1 {
  	text-align: center;
 }
 
@@ -67,9 +135,6 @@ body {
     width: 100%;
     background-color: transparent;
 }
-
-
-
 .lib-panel .lib-row {
     padding: 0 20px 0 20px;
 }
