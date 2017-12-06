@@ -1,3 +1,52 @@
+function validateText(text){
+	var regex = /^[a-zA-Z\s]+$/;
+        if (regex.test(text)){
+            return true;
+        } else {
+            return false;
+        }
+}
+
+function validateDate(date){
+	var regex = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+		if(regex.test(date)){
+			return true;
+		} else {
+			return false;
+		}
+}
+
+function validateEmail(email){
+	var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(regex.test(email)){
+		return true;
+	} else {
+		return false;
+	}
+
+}
+
+function validatePhone(phone){
+	var regex = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+	if (regex.test(phone)){
+		return true;
+	} else{
+		return false;
+	}
+}
+
+function validateCreditCards(cc){
+	var regex = /^(\d{4}-){3}\d{4}$|^(\d{4} ){3}\d{4}$|^\d{16}$/;
+	if (regex.test(cc)){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+
+
 $(document).ready(function(){
 
 	$("#submit").on("click", function(event){
