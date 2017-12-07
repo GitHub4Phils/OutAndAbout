@@ -1,3 +1,9 @@
+.finalMessage{
+  display:none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
 #userForms{
   padding:10px;
 }
