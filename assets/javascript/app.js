@@ -32,7 +32,7 @@ function validatePhone(phone){
 	var regex = /^[2-9]\d{2}-\d{3}-\d{4}$/;
 	if (regex.test(phone)){
 		return true;
-	} else{
+	} else {
 		return false;
 	}
 }
@@ -120,14 +120,14 @@ $(document).ready(function(){
 		var input_location = $("#location").val();
 		if(validateText(input_location)){
 		} else{
-			alert("Invalid city name");
+			$("#location").focus();
 			return;
 		}
 		input_location = input_location.replace(/ /g, "+");
 		var input_date = $("#date").val();
 		if(validateDate(input_date)){
 		} else{
-			alert("Invalid date");
+			$("#date").focus();
 			return;
 		}
 		input_date = input_date.replace(/ /g, "+");
@@ -278,28 +278,28 @@ var config = {
 		var clientName = $("#name-input").val().trim();
 			if(validateText(clientName)){
 			} else {
-				alert("Invalid Name");
+				$("#name-input").focus();
 				return;
 			}
 
 		var clientEmail = $("#email-input").val().trim();
 			if(validateEmail(clientEmail)){
 			} else{
-				alert("Invalid email");
+				$("#email-input").focus();
 				return;
 			}
 
 		var clientPhone = $("#phone-input").val().trim();
 			if (validatePhone(clientPhone)){
 			} else {
-				alert("Invalid contact details");
+				$("#phone-input").focus();
 				return;
 			}
 
 		var clientCreditCard = $("#cc-input").val().trim();
 			if(validateCreditCards(clientCreditCard)){
 			} else{
-				alert("Invalid credit card details");
+				$("#cc-input").focus();
 			}
 		var clientId = clientCreditCard.substring(clientCreditCard.length-4,clientCreditCard.length);
 
@@ -357,13 +357,14 @@ var config = {
 		newClient.parkings.push(newParkingOrder);
 		database.ref("/client").push(newClient)
 		
-		// alert("Thank you for successfully placing your order!");
 		$(".finalMessage").show();
 
 		$("#name-input").val(""); 
 		$("#email-input").val("");
 		$("#phone-input").val("");
 		$("#cc-input").val("");
+		$("#location").val("");
+		$("#date").val("");
 		$(".eventCartdiv").hide();
 		$(".parkingCartDiv").hide();
 
