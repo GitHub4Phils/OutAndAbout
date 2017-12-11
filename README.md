@@ -16,6 +16,6 @@ API's used:
 
 ### 1.The app user will input a city and date.
 ### 2.The app will show a list of events in that specific city and date provided by the user.
-### 3.The user the clicks on the event she picked and liked, and that is added to the CART  on the right hand side where her list of events are stored.
+### 3.The user then clicks on the event she picked and liked, and that is added to the CART  on the right hand side where her list of events are stored.
 ### 4.The user then will also be given a button for parking, when clicked, adds it to the CART as well.
 ### 5.When the user is done selecting events as well as parking, they will then have to type in ther info to save the event.
