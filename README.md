@@ -1,5 +1,9 @@
 # outAndAbout
 group project1
+deployed site:
+[deployed site](https://github4phils.github.io/OutAndAbout/ "Deployed site")
+
+
 
 ![out and about](page0.png)
 
