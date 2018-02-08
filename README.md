@@ -1,6 +1,7 @@
 # outAndAbout
-group project1
-deployed site:
+Out&About is an event lookup app where users can find the current events and activities in the area specified in the search bar. The app takes advantage of google, eventful and parkWhiz API. In the app, the users have the ability to select the event they want to go attend, click and add to their "shopping cart", lookup parking availabilities in the surrounding area as well as print the list of the items in the shopping cart in a pdf format.
+
+### deployed site:
 [deployed site](https://github4phils.github.io/OutAndAbout/ "Deployed site")
 
 
