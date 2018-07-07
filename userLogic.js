@@ -38,7 +38,7 @@ var database = firebase.database();
 //  Button for adding users
 $("#add-user-btn").on("click", function(event) {
   event.preventDefault();
-  //console.log(ValidateEmail("maroseray@yahoo.com"));
+  
 
   // Grabs user input
   var name    = $("#name-input").val().trim();
