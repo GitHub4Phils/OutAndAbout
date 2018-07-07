@@ -30,16 +30,7 @@ function validatePhone(phone)
 
 
 // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD_vpYQZnUe9ENFciN6nDU4352kJt92xJc",
-    authDomain: "outandabout-ddea5.firebaseapp.com",
-    databaseURL: "https://outandabout-ddea5.firebaseio.com",
-    projectId: "outandabout-ddea5",
-    storageBucket: "outandabout-ddea5.appspot.com",
-    messagingSenderId: "436267379416"
-  };
-  firebase.initializeApp(config);
-
+  
 var database = firebase.database();
 
 
